@@ -8,6 +8,7 @@
     <title>React JS</title>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
 <body>
@@ -27,20 +28,32 @@
 
         const root = document.querySelector('#root');
 
-        const p1 = React.createElement('p', {
-            children: 'Hello paragraf 1',
-        });
-        const p2 = React.createElement('p', {
-            children: 'Hello paragraf 2',
-        });
+        // const li1 = React.createElement('li',
+        //     {
+        //         children: 'Apple'
+        //     })
+        // const li2 = React.createElement('li',
+        //     {
+        //         children: 'Orange'
+        //     })
+        // const li3 = React.createElement('li',
+        //     {
+        //         children: 'Grape'
+        //     })
+        // const element = React.createElement('ul', { className: 'list' }, 'Hello World!', ' Selamat Datang', ' di Kampus', li1, li2, li3)
 
-        const element = React.createElement(React.Fragment, {
-            children: [p1, p2],
-        });
         ReactDOM.render(element, root);
 
-    </script>
+        const element = (
+            <ul>
+                <li>Apple</li>
+                <li>Orange</li>
+                <li>Grape</li>
+            </ul>
+        )
 
+    </script>
+    <script type="text/babel"></script>
 </body>
 
 </html>
